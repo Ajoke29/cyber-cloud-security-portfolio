@@ -1,0 +1,7 @@
+## Security Log Investigation
+
+Security logs were analyzed in Microsoft Sentinel using KQL queries.
+
+The investigation focused on Windows security events such as failed login attempts.
+
+![Sentinel Log Analysis](screenshots/sentinel-log-query.png)
