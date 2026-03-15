@@ -18,26 +18,89 @@ The lab focuses heavily on **Identity and Access Management (IAM)** concepts inc
 This environment replicates how organizations manage user access in **real enterprise hybrid environments**.
 
 ---
+# Hybrid Identity Architecture
 
-# Lab Architecture
+This lab demonstrates a hybrid identity architecture integrating on-premises Active Directory with Microsoft Entra ID (Azure AD).
 
-The hybrid environment consists of the following components:
+The environment simulates a real enterprise identity infrastructure used to manage authentication and access across both on-premises systems and cloud services.
 
-```
-Internet
-   ↓
-Microsoft Azure Tenant
-   ↓
-Azure Entra ID (Cloud Identity Platform)
-   ↓
-Azure AD Connect (Directory Synchronization)
-   ↓
-On-Premises Active Directory Domain Controller
-   ↓
-Domain Users / Groups / Organizational Units
-```
+---
 
-This architecture allows identities created in **Active Directory** to be synchronized to **Azure Entra ID** for cloud authentication.
+# Architecture Overview
+
+The hybrid environment consists of:
+
+User Devices
+Windows clients joined to the Active Directory domain.
+
+Domain Controller
+Windows Server 2022 configured with:
+
+- Active Directory Domain Services
+- DNS
+- DHCP
+
+Azure AD Connect
+Synchronizes identities from on-premises Active Directory to Microsoft Entra ID.
+
+Microsoft Entra ID
+Cloud identity platform used for:
+
+- authentication
+- identity governance
+- conditional access
+- MFA
+
+Security Controls
+Identity protection policies including:
+
+- Multi-Factor Authentication
+- Conditional Access
+- Sign-in monitoring
+- Audit logging
+
+---
+
+# Identity Flow
+
+Authentication and identity management flow through the environment as follows:
+
+User Login → Windows Client  
+Windows Client → Active Directory Domain Controller  
+Active Directory → Azure AD Connect  
+Azure AD Connect → Microsoft Entra ID  
+
+Once synchronized, users can access cloud resources securely using the same identity.
+
+---
+
+# Identity Security Controls Implemented
+
+The following security controls were implemented in the environment:
+
+Multi-Factor Authentication (MFA)
+
+Users are required to verify their identity using a second authentication factor.
+
+Conditional Access
+
+Policies restrict access based on:
+
+- device compliance
+- authentication method
+- user risk level
+
+Role Based Access Control (RBAC)
+
+Security groups are used to manage permissions and resource access.
+
+Audit Logs
+
+Administrative actions and directory changes are tracked.
+
+Sign-in Logs
+
+Authentication attempts are monitored for suspicious activity.
 
 ---
 
