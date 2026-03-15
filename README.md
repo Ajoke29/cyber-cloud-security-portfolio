@@ -33,10 +33,7 @@ My focus areas include:
 
 # Featured Projects
 
-## Active Directory Enterprise Home Lab
-Built a full Active Directory environment using VMware including domain controller configuration, domain joined clients, user and group management, and Group Policy deployment.
-
-## Hybrid Identity Environment
+## Enterprise Hybrid Identity Environment
 Integrated on-prem Active Directory with Microsoft Entra ID using Azure AD Connect and implemented Conditional Access and MFA security controls.
 
 ## Microsoft Sentinel SIEM Monitoring Lab
