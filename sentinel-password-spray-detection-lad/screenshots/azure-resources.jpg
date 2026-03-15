@@ -1,0 +1,32 @@
+# Screenshots
+
+## SOC Architecture
+
+This diagram shows the simulated cloud Security Operations Center environment.
+
+![SOC Architecture](screenshots/soc-architecture.png)
+
+---
+
+## Azure Infrastructure
+
+The following Azure resources were deployed for the lab:
+
+- Virtual Network
+- Virtual Machine
+- Network Security Group
+- Public IP address
+- Log Analytics Workspace
+- Resource Group
+
+![Azure Resources](screenshots/azure-resources.png)
+
+---
+
+## Security Log Investigation
+
+Security logs were analyzed in Microsoft Sentinel using KQL queries.
+
+The investigation focused on Windows security events such as failed login attempts.
+
+![Sentinel Log Analysis](screenshots/sentinel-log-query.png)
