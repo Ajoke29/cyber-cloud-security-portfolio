@@ -1,0 +1,32 @@
+## Architecture Design
+
+The DevOps pipeline is designed using a modular architecture where each component performs a specific function within the software delivery lifecycle.
+
+The architecture separates responsibilities into multiple layers:
+
+### Source Control Layer
+GitHub acts as the central version control system where developers store and manage application source code.
+
+### Continuous Integration Layer
+Jenkins orchestrates the CI/CD pipeline and automates the software build, testing, and packaging process.
+
+### Code Quality Layer
+SonarQube analyzes application source code to detect vulnerabilities, bugs, and maintainability issues before deployment.
+
+### Containerization Layer
+Docker packages the application into a container image, ensuring consistent runtime environments across development, testing, and production systems.
+
+### Security Layer
+Trivy performs vulnerability scanning on container images to detect known security flaws before the application is deployed.
+
+### Container Registry Layer
+DockerHub stores container images and acts as the artifact repository for the deployment stage.
+
+### GitOps Deployment Layer
+Argo CD monitors the DevOps repository and automatically synchronizes Kubernetes deployments based on the desired configuration stored in Git.
+
+### Container Orchestration Layer
+Kubernetes manages containerized workloads, handles scaling, load balancing, and ensures application availability.
+
+### Notification Layer
+Slack integration allows teams to receive real-time notifications about build status and deployment outcomes.
