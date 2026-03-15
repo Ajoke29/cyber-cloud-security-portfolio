@@ -1,0 +1,18 @@
+## Security Risks Mitigated
+
+The CI/CD pipeline integrates multiple security mechanisms to protect the software delivery process.
+
+### Code Vulnerabilities
+SonarQube scans application code to identify security vulnerabilities such as injection flaws, insecure dependencies, and poor coding practices.
+
+### Container Vulnerabilities
+Trivy scans container images for known vulnerabilities in operating system packages and third-party libraries.
+
+### Unauthorized Infrastructure Changes
+GitOps ensures that all infrastructure configurations are managed through Git repositories, preventing unauthorized manual modifications.
+
+### Deployment Integrity
+Argo CD continuously reconciles the Kubernetes cluster with the desired state defined in the Git repository, preventing configuration drift.
+
+### Deployment Monitoring
+Slack notifications provide visibility into pipeline execution and allow teams to respond quickly to failures.
